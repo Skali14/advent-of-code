@@ -14,7 +14,7 @@ fn solve_part_one() -> u64 {
     let input = read_to_string("././input/input_day1.txt").expect("Error reading input file to string");
     for line in input.split("\n") {
         let mut numbers: LinkedList<u64> = LinkedList::new();
-        let mut letters: Vec<char> = line.chars().collect();
+        let letters: Vec<char> = line.chars().collect();
         for char in letters {
             if char.is_numeric() {
                 numbers.push_back(char.to_digit(10).expect("Error parsing character to integer!") as u64);
